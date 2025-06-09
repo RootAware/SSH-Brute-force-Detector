@@ -36,7 +36,29 @@ cd ssh-bruteforce-detector
 - It then scans these timestamps to detect if the number of failed attempts exceeds a configurable threshold within a set time window (default: 5 attempts in 1 minute).
 - When such a pattern is detected, it prints an alert with the IP address, number of attempts, and the relevant time period.
 
-This method helps detect brute-force attack patterns by focusing on rapid repeated failures from the same IP.
+  This method helps detect brute-force attack patterns by focusing on rapid repeated failures from the same IP.
+
+  ---
+
+3. **Customization:**
+     
+ - Threshold: Adjust the number of failed attempts (THRESHOLD) to tune sensitivity.
+- Time Window: Modify TIME_WINDOW to change the detection period (default is 1 minute).
+- Extend: Integrate with email alerts, dashboards, or automated blocking mechanisms.
+
+ ---
+
+2. **Limitations:**
+   
+- Designed for Linux SSH logs with standard formats.
+- Requires read access to the log file.
+- May need modifications for non-standard log formats or other SSH server setups.
+
+---
+
+4. **Contributing:**
+
+- Feel free to fork, improve, and submit pull requests!
 
 
 
